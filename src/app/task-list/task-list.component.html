@@ -1,0 +1,29 @@
+<section class="row">
+	<hr>
+	<div class="list-group">
+		<a href="#"
+		   class="list-group-item list-group-item-action justify-content-between"
+           *ngFor="let task of tasks; let index = index"
+           (click)="toggleCompleteTask(index)"
+           [ngClass]="{'task-complete': task.complete, 'list-group-item-success': task.complete}">
+			{{ task.name }}
+			<button type="button" class="close" aria-label="Close"
+			        (click)="removeTask(index); $event.stopPropagation()">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</a>
+		<!--<a href="#" class="list-group-item list-group-item-action justify-content-between task-complete  list-group-item-success">-->
+			<!--Task 2-->
+			<!--<button type="button" class="close" aria-label="Close">-->
+				<!--<span aria-hidden="true">&times;</span>-->
+			<!--</button>-->
+		<!--</a>-->
+		<!--<a href="#"-->
+		   <!--class="list-group-item list-group-item-action justify-content-between task-complete  list-group-item-danger">-->
+			<!--Task 3-->
+			<!--<button type="button" class="close" aria-label="Close">-->
+				<!--<span aria-hidden="true">&times;</span>-->
+			<!--</button>-->
+		<!--</a>-->
+	</div>
+</section>

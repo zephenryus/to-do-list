@@ -1,0 +1,10 @@
+<section class="row">
+	<h1>To-Do List</h1>
+
+	<div class="col-md-10">
+		<input type="text" class="form-control" placeholder="Task" id="task" [(ngModel)]="newTask">
+	</div>
+	<div class="col-md-2">
+		<button class="btn btn-primary" (click)="addTask($event)">Add Task</button>
+	</div>
+</section>

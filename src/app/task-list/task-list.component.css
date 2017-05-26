@@ -1,0 +1,3 @@
+.task-complete, .task-complete:hover {
+    text-decoration: line-through;
+}
