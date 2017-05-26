@@ -1,7 +1,9 @@
 <main class="container">
 	<div class="form-group col-xs-12">
-		<form action="#">
-			<app-add-to-do (newTaskAdded)="onNewTaskAdded($event)"></app-add-to-do>
+		<form>
+			<app-add-to-do
+				(newTaskAdded)="onNewTaskAdded($event)">
+			</app-add-to-do>
 
 			<app-task-list
 				[tasks]="tasks"
